@@ -1,0 +1,14 @@
+node_modules
+dist
+out
+.DS_Store
+.eslintcache
+*.log*
+
+# Lokalna konfiguracja i sekrety
+.env
+.env.*
+!.env.example
+.npmrc
+*.p12
+*.pfx

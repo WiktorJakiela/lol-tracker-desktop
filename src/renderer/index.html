@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Dokument startowy okna: ustawia politykę bezpieczeństwa CSP i element root, w którym React montuje aplikację. -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoL Tracker</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- CSP dopuszcza lokalne zasoby oraz pobieranie katalogów i obrazów z Data Dragon. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://ddragon.leagueoflegends.com; img-src 'self' data: https://ddragon.leagueoflegends.com"
+    />
+  </head>
+
+  <body>
+    <!-- React wypełnia ten element; zawartość aplikacji pochodzi z App.tsx. -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
